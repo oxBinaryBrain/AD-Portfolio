@@ -214,8 +214,8 @@ export const LogoLoop = memo(function LogoLoop({
 
   const resolvedHoverSpeed = useMemo(() => {
     if (hoverSpeed !== undefined) return hoverSpeed;
+    if (pauseOnHover === false) return undefined;
     if (pauseOnHover === true) return 0;
-    if (pauseOnHover !== false) return 0;
     return undefined;
   }, [hoverSpeed, pauseOnHover]);
 
@@ -314,7 +314,7 @@ export const LogoLoop = memo(function LogoLoop({
     (item: LogoLoopItem, index: number) => {
       if (renderItem) {
         return (
-          <li className="logoloop__item" role="listitem">
+          <li key={index} className="logoloop__item" role="listitem">
             {renderItem(item, index)}
           </li>
         );
@@ -362,7 +362,7 @@ export const LogoLoop = memo(function LogoLoop({
       );
 
       return (
-        <li className="logoloop__item" role="listitem">
+        <li key={index} className="logoloop__item" role="listitem">
           {wrappedContent}
         </li>
       );
@@ -380,9 +380,7 @@ export const LogoLoop = memo(function LogoLoop({
           aria-hidden={copyIndex > 0}
           ref={copyIndex === 0 ? listRef : undefined}
         >
-          {logos.map((logo, logoIndex) =>
-            renderLogo(logo, Number(`${copyIndex}-${logoIndex}`)),
-          )}
+          {logos.map((logo, logoIndex) => renderLogo(logo, logoIndex))}
         </ul>
       )),
     [copyCount, logos, renderLogo],

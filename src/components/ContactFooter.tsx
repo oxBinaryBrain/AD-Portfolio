@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 import { useRef } from "react";
 
-gsap.registerPlugin(ScrollTrigger, useGSAP);
+gsap.registerPlugin(ScrollTrigger);
 
 export function ContactFooter() {
   const year = new Date().getFullYear();
@@ -114,7 +114,7 @@ export function ContactFooter() {
             >
               <div className="flex flex-col gap-1 mb-12 md:mb-24">
                 <a
-                  href="https://github.com"
+                  href="https://github.com/oxBinaryBrain/"
                   target="_blank"
                   rel="noreferrer"
                   className="text-4xl md:text-5xl font-poster font-bold tracking-tight text-grit-900 leading-tight hover:text-accent transition-colors"
@@ -122,7 +122,7 @@ export function ContactFooter() {
                   GitHub
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/uday-g-601ba9266"
                   target="_blank"
                   rel="noreferrer"
                   className="text-4xl md:text-5xl font-poster font-bold tracking-tight text-grit-900 leading-tight hover:text-accent transition-colors"
@@ -137,10 +137,10 @@ export function ContactFooter() {
                 </a>
               </div>
               <a
-                href="mailto:m.andrewdominic9@gmail.com"
+                href="mailto:ud4yg@yandex.com"
                 className="text-sm md:text-base font-body text-grit-900 hover:underline"
               >
-                m.andrewdominic9@gmail.com
+                ud4yg@yandex.com
               </a>
             </div>
 
@@ -220,7 +220,7 @@ export function ContactFooter() {
             className="w-full flex flex-col md:flex-row justify-between items-center gap-6 mt-16 md:mt-24 pt-8 border-t border-grit-900/10 pointer-events-auto"
           >
             <span className="text-[0.55rem] font-header font-bold tracking-[0.3em] uppercase text-grit-900/40">
-              © {year} ANDREW DOMINIC M
+              © {year} UDAY G
             </span>
             <span className="text-[0.55rem] font-header font-bold tracking-[0.3em] uppercase text-grit-900/40">
               BUILD_REF // V4.3

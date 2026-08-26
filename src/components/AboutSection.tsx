@@ -28,7 +28,7 @@ import { SkillsMenu, type SkillsMenuItemData } from "@/components/SkillsMenu";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const ANDREW_IMAGE = "/assets/andrew-CBDr9qxr.jfif";
+const UDAY_IMAGE = "/assets/uday.png";
 const PC_IMAGE = "/assets/pc-CUA4L57Q.jfif";
 const CONTENT_IMAGE_1 = "/assets/conntent-CJYjiJU2.jfif";
 const CONTENT_IMAGE_2 = "/assets/ritcontent-CRG20fba.jpeg";
@@ -78,7 +78,7 @@ export function AboutSection() {
   const firstBioRef = useRef<HTMLDivElement>(null);
   const secondBioRef = useRef<HTMLDivElement>(null);
   const originStoryRef = useRef<HTMLDivElement>(null);
-  const andrewImageRef = useRef<HTMLImageElement>(null);
+  const udayImageRef = useRef<HTMLImageElement>(null);
   const pcImageRef = useRef<HTMLImageElement>(null);
   const pcClipRef = useRef<HTMLDivElement>(null);
 
@@ -156,16 +156,16 @@ export function AboutSection() {
         );
       }
 
-      if (andrewImageRef.current) {
-        gsap.set(andrewImageRef.current, {
+      if (udayImageRef.current) {
+        gsap.set(udayImageRef.current, {
           opacity: 0,
           filter: "blur(12px)",
           scale: 0.95,
         });
       }
 
-      if (firstBioRef.current && andrewImageRef.current) {
-        gsap.to(andrewImageRef.current, {
+      if (firstBioRef.current && udayImageRef.current) {
+        gsap.to(udayImageRef.current, {
           opacity: 1,
           filter: "blur(0px)",
           scale: 1,
@@ -288,31 +288,25 @@ export function AboutSection() {
 
           <div className="narrative-step absolute inset-0 flex items-center justify-center px-6 sm:px-12 md:px-16 max-w-4xl mx-auto text-center md:text-left">
             <p className="text-[1.35rem] sm:text-2xl md:text-3xl lg:text-4xl font-body font-light text-white leading-[1.6] sm:leading-[1.5] tracking-tight">
-              I&apos;m Andrew Dominic M — a 19-year-old CS and Business Systems
-              student at RIT Chennai, and co-founder of Synflow Studio, a web
-              and AI automation agency based in Chennai.
+              I&apos;m Uday G — a full-stack freelancer based in Bengaluru with
+              a B.Tech in Computer Science (AI & ML) from Presidency
+              University. I build websites and AI automations that save
+              businesses hours every week.
             </p>
           </div>
 
           <div className="narrative-step absolute inset-0 flex items-center justify-center px-6 sm:px-12 md:px-16 max-w-4xl mx-auto text-center md:text-left">
             <p className="text-[1.35rem] sm:text-2xl md:text-3xl lg:text-4xl font-body font-light text-white leading-[1.6] sm:leading-[1.5] tracking-tight">
-              I build systems for real businesses — not demo apps, not clones.
-              I&apos;ve shipped a production e-commerce platform for a{" "}
-              <strong className="font-bold text-white drop-shadow-[0_0_12px_rgba(255,255,255,0.4)]">
-                100K
-              </strong>{" "}
-              audience brand, a live ticketing system for a{" "}
-              <strong className="font-bold text-white drop-shadow-[0_0_12px_rgba(255,255,255,0.4)]">
-                3,000+
-              </strong>{" "}
-              attendee college fest, and an autonomous drone dashboard for the
-              ISRO challenge.
+              I&apos;ve shipped real products for real clients — ecommerce
+              platforms, event ticketing systems, interactive 3D web
+              experiences, AI automation workflows, and blockchain data tools. I
+              build systems that actually work.
             </p>
           </div>
 
           <div className="narrative-step absolute inset-0 flex flex-col items-center justify-center px-6 sm:px-12 md:px-16 max-w-5xl mx-auto text-center">
             <span className="text-[0.45rem] sm:text-[0.5rem] font-header font-bold tracking-[0.35em] uppercase text-white/20 block mb-6 sm:mb-8">
-              ORIGIN_STORY
+              MY STORY
             </span>
             <p className="text-[1.7rem] sm:text-4xl md:text-5xl lg:text-6xl font-helvetica font-bold leading-[1.2] tracking-tight uppercase text-white">
               &quot;MY PARENTS RUN A SMALL PROVISION STORE. I SAW FIRSTHAND HOW
@@ -374,7 +368,7 @@ export function AboutSection() {
                       "Studio,",
                     ]}
                   >
-                    {`I'm Andrew Dominic M — a 19-year-old CS and Business Systems student at RIT Chennai, and co-founder of Synflow Studio, a web and AI automation agency based in Chennai.`}
+                    {`I'm Uday G — a full-stack freelancer based in Bengaluru with a B.Tech in Computer Science (AI & ML) from Presidency University. I build websites and AI automations that save businesses hours every week.`}
                   </RevealWords>
                 </div>
               </div>
@@ -397,7 +391,7 @@ export function AboutSection() {
                       "clones.",
                     ]}
                   >
-                    {`I build systems for real businesses — not demo apps, not clones. I've shipped a production e-commerce platform for a 100K audience brand, a live ticketing system for a 3,000+ attendee college fest, and an autonomous drone dashboard for the ISRO challenge.`}
+                    {`I've shipped real products for real clients — ecommerce platforms, event ticketing systems, interactive 3D web experiences, AI automation workflows, and blockchain data tools. I build systems that actually work.`}
                   </RevealWords>
                 </div>
               </div>
@@ -408,10 +402,10 @@ export function AboutSection() {
                 <div className="relative w-full max-w-sm lg:max-w-md aspect-[4/5] rounded-xl overflow-hidden border border-white/10 shadow-2xl">
                   <div className="absolute inset-0 w-full h-full">
                     <img
-                      ref={andrewImageRef}
-                      src={ANDREW_IMAGE}
+                      ref={udayImageRef}
+                      src={UDAY_IMAGE}
                       className="w-full h-full object-cover"
-                      alt="Andrew Dominic"
+                      alt="Uday G"
                     />
                   </div>
                   <div
@@ -439,7 +433,7 @@ export function AboutSection() {
                 ORIGIN_STORY
               </span>
               <RevealWords className="text-2xl md:text-4xl lg:text-5xl font-helvetica font-bold leading-[1.2] tracking-tight uppercase text-white">
-                {`"MY PARENTS RUN A SMALL PROVISION STORE. I SAW FIRSTHAND HOW MUCH BETTER BUSINESSES COULD OPERATE WITH THE RIGHT DIGITAL SYSTEMS."`}
+                {`"I SAW FIRSTHAND HOW MUCH BETTER BUSINESSES COULD OPERATE WITH THE RIGHT DIGITAL SYSTEMS AND AUTOMATION."`}
               </RevealWords>
               <div className="mt-12 flex items-center justify-center gap-3">
                 <div className="h-px w-10 bg-white/15" />
@@ -454,7 +448,7 @@ export function AboutSection() {
           <div className="min-h-[80vh] flex flex-col lg:flex-row items-center justify-between px-8 md:px-16 py-24 gap-12 relative z-10">
             <div className="w-full lg:w-[45%] max-w-2xl shrink-0">
               <RevealWords className="text-xl md:text-2xl lg:text-3xl font-body font-semibold text-white leading-[1.6] tracking-tight">
-                {`When I'm not building, I'm documenting the journey on Instagram and LinkedIn — because I think more students should see what's actually possible when you just start building.`}
+                {`When I'm not building, I'm documenting the journey on Instagram, X, and LinkedIn — because I think more students should see what's possible when technology meets real-world operations.`}
               </RevealWords>
 
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-8 sm:gap-12 mt-10 pt-8 border-t border-white/10">
@@ -472,7 +466,7 @@ export function AboutSection() {
 
                 <div className="flex flex-col gap-1">
                   <h3 className="text-5xl md:text-6xl font-helvetica font-bold tracking-tighter text-white flex items-baseline">
-                    <Counter to={100} duration={2} />
+                    <Counter to={250} duration={2.5} />
                     <span className="text-3xl md:text-4xl ml-1 tracking-tight text-white/80">
                       K+
                     </span>
@@ -521,7 +515,7 @@ export function AboutSection() {
               EDUCATION://
             </span>
             <span className="text-sm sm:text-base md:text-lg font-header font-bold text-white/60 tracking-tight text-center">
-              B.Tech CS × Business Systems — RIT Chennai
+              B.Tech — Computer Science (AI & ML) — Presidency University, Bengaluru
             </span>
           </div>
         </div>

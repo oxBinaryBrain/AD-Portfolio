@@ -39,30 +39,30 @@ const kanit = Kanit({
 });
 
 export const metadata: Metadata = {
-  title: "Andrew Dominic M — Product-Focused Developer",
+  title: "Uday G — Full-Stack Freelancer",
   description:
-    "Andrew Dominic M is a Product-Focused Developer building high-performance systems for real businesses. E-commerce, event platforms, and autonomous systems — shipped and scaled.",
+    "Uday G builds websites and AI automations that save businesses hours every week. Full-stack developer based in Bengaluru.",
   keywords:
-    "Andrew Dominic M, Product-Focused Developer, Full-Stack Developer, Next.js, React, Node.js, Portfolio, Web Developer India",
-  authors: [{ name: "Andrew Dominic M" }],
+    "Uday G, Full-Stack Freelancer, Web Developer, AI Automation, Next.js, React, Bengaluru",
+  authors: [{ name: "Uday G" }],
   openGraph: {
     type: "website",
-    title: "Andrew Dominic M — Product-Focused Developer",
+    title: "Uday G — Full-Stack Freelancer",
     description:
-      "Building systems that actually work. Full-stack developer shipping production platforms for real businesses.",
-    siteName: "Andrew Dominic M",
+      "Websites and AI automations that actually work. Based in Bengaluru.",
+    siteName: "Uday G",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Andrew Dominic M — Product-Focused Developer",
+    title: "Uday G — Full-Stack Freelancer",
     description:
-      "Building systems that actually work. Full-stack developer shipping production platforms for real businesses.",
+      "Websites and AI automations that save businesses hours every week. Based in Bengaluru.",
   },
   icons: {
     icon: [
       {
-        url: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230a0a0a'/><text x='50' y='72' font-size='60' font-family='sans-serif' font-weight='bold' fill='white' text-anchor='middle'>A</text></svg>",
+        url: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230a0a0a'/><text x='50' y='72' font-size='60' font-family='sans-serif' font-weight='bold' fill='%23da2727' text-anchor='middle'>U</text></svg>",
       },
     ],
   },

@@ -9,7 +9,7 @@ import Link from "next/link";
 import { useRef } from "react";
 import { projects } from "@/data/site";
 
-gsap.registerPlugin(ScrollTrigger, useGSAP);
+gsap.registerPlugin(ScrollTrigger);
 
 function ProjectDescription({
   description,

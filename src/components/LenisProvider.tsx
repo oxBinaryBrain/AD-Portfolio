@@ -20,21 +20,14 @@ export function LenisProvider({ children }: { children: ReactNode }) {
       touchMultiplier: 2,
       anchors: true,
       infinite: false,
+      autoRaf: true,
     });
 
     lenisRef.current = lenis;
     lenis.on("scroll", ScrollTrigger.update);
-
-    const raf = (time: number) => {
-      lenis.raf(time * 1000);
-    };
-
-    gsap.ticker.add(raf);
-    gsap.ticker.lagSmoothing(0);
-    ScrollTrigger.refresh();
+    lenis.start();
 
     return () => {
-      gsap.ticker.remove(raf);
       lenis.destroy();
     };
   }, []);

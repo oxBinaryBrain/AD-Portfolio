@@ -1,7 +1,7 @@
 "use client";
 
-import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { useEffect, useMemo, useRef } from "react";
+import { Canvas, useThree } from "@react-three/fiber";
+import { useEffect, useMemo } from "react";
 import * as THREE from "three";
 
 const vertexShader = `
@@ -102,6 +102,8 @@ function WavePlane({
   waveFrequency = 2.5,
   waveAmplitude = 0.25,
   waveColor = [0.85, 0.85, 0.85] as [number, number, number],
+  colorNum = 3,
+  pixelSize = 1,
   enableMouseInteraction = true,
   mouseRadius = 0.3,
   disableAnimation = false,
@@ -110,12 +112,13 @@ function WavePlane({
   waveFrequency?: number;
   waveAmplitude?: number;
   waveColor?: [number, number, number];
+  colorNum?: number;
+  pixelSize?: number;
   enableMouseInteraction?: boolean;
   mouseRadius?: number;
   disableAnimation?: boolean;
 }) {
   const { viewport, size, gl } = useThree();
-  const start = useRef(performance.now());
 
   const material = useMemo(
     () =>
@@ -159,10 +162,15 @@ function WavePlane({
     return () => window.removeEventListener("mousemove", onMove);
   }, [enableMouseInteraction, gl, material]);
 
-  useFrame(() => {
+  useEffect(() => {
     if (disableAnimation) return;
-    material.uniforms.time.value = (performance.now() - start.current) / 1000;
-  });
+    const start = performance.now();
+    let frame = requestAnimationFrame(function tick(time) {
+      material.uniforms.time.value = (time - start) / 1000;
+      frame = requestAnimationFrame(tick);
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [disableAnimation, material]);
 
   return (
     <mesh scale={[viewport.width, viewport.height, 1]}>

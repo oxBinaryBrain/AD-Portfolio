@@ -123,7 +123,7 @@ function SkillsMenuItem({
                 hoverSpeed={30}
                 scaleOnHover
                 fadeOut={false}
-                renderItem={(logo, index) => {
+                renderItem={(logo) => {
                   const item = logo as LogoLoopItem & { node?: ReactNode; title?: string };
                   return (
                     <div

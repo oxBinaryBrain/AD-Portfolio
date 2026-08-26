@@ -53,7 +53,7 @@ export const projects: Project[] = [
     description:
       "Co-founded a digital studio focused on building websites and automation systems for small businesses — helping streamline operations, manage leads, and improve client workflows.",
     highlight: "small businesses",
-    link: "/project/sinclo",
+    link: "/project/synflow",
   },
 ];
 
@@ -87,19 +87,19 @@ export const focusSkills: SkillGroup = {
 };
 
 export const aboutParagraphs = [
-  "I'm Andrew Dominic M — a 19-year-old CS and Business Systems student at RIT Chennai, and co-founder of Synflow Studio, a web and AI automation agency based in Chennai.",
-  "I build systems for real businesses — not demo apps, not clones. I've shipped a production e-commerce platform for a 100K audience brand, a live ticketing system for a 3,000+ attendee college fest, and an autonomous drone dashboard for the ISRO challenge.",
+  "I'm Uday G — a full-stack freelancer based in Bengaluru with a B.Tech in Computer Science (AI & ML) from Presidency University. I build websites and AI automations that save businesses hours every week.",
+  "I've shipped real products for real clients — ecommerce platforms, event ticketing systems, interactive 3D web experiences, AI automation workflows, and blockchain data tools. I build systems that actually work.",
 ];
 
 export const originStory =
-  '"MY PARENTS RUN A SMALL PROVISION STORE. I SAW FIRSTHAND HOW MUCH BETTER BUSINESSES COULD OPERATE WITH THE RIGHT DIGITAL SYSTEMS."';
+  '"I SAW FIRSTHAND HOW MUCH BETTER BUSINESSES COULD OPERATE WITH THE RIGHT DIGITAL SYSTEMS AND AUTOMATION."';
 
 export const socialParagraph =
-  "When I'm not building, I'm documenting the journey on Instagram and LinkedIn — because I think more students should see what's actually possible when you just start building.";
+  "When I'm not building, I'm documenting the journey on Instagram, X, and LinkedIn — because I think more students should see what's possible when technology meets real-world operations.";
 
 export const contentImages = [
   { src: "/assets/conntent-CJYjiJU2.jfif", alt: "Content Creation 1", z: 1 },
-  { src: "/assets/ritcontent-CRG20fba.jpeg", alt: "RIT Content", z: 2 },
+  { src: "/assets/ritcontent-CRG20fba.jpeg", alt: "Content 2", z: 2 },
   { src: "/assets/content 2-CqU4pB8E.jpeg", alt: "Content Creation 2", z: 3 },
   { src: "/assets/networking-Dcuhsfjy.jpeg", alt: "Networking", z: 4 },
 ];

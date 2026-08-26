@@ -87,7 +87,7 @@ export function CapsulePortal() {
             visibility: "visible",
           });
 
-          const clipWidth = capsule.getBoundingClientRect().width - bounds.left;
+          const clipWidth = capsule.getBoundingClientRect().width - bounds.left - bounds.right;
           gsap.set([whiteBgRef.current, gifContainerRef.current], {
             clipPath: `inset(0px ${clipWidth}px 0px 0px)`,
           });
@@ -225,7 +225,7 @@ export function CapsulePortal() {
             visibility: "visible",
           });
 
-          const clipWidth = capsule.getBoundingClientRect().width - bounds.left;
+          const clipWidth = capsule.getBoundingClientRect().width - bounds.left - bounds.right;
           gsap.set([whiteBgRef.current, gifContainerRef.current], {
             clipPath: `inset(0px ${clipWidth}px 0px 0px)`,
           });
@@ -387,13 +387,13 @@ export function CapsulePortal() {
             className="hero-role-tag"
           >
             <span className="hero-meta-label hero-meta-label--left">
-              Portfolio — 2026
+              Portfolio — 2025
             </span>
             <div className="hero-role-line" />
-            <p className="hero-role-text">Product-Focused Developer</p>
+            <p className="hero-role-text">Full-Stack Freelancer</p>
             <div className="hero-role-line" />
             <span className="hero-meta-label hero-meta-label--right">
-              Andrew Dominic M.
+              Uday G
             </span>
           </motion.div>
 
@@ -493,7 +493,7 @@ export function CapsulePortal() {
           transition={{ delay: 1.5, duration: 1 }}
           className="hero-side-label hero-side-label--left"
         >
-          <span>Digital Product Architect</span>
+          <span>Websites + AI Automations</span>
         </motion.div>
 
         <motion.div
@@ -503,7 +503,7 @@ export function CapsulePortal() {
           transition={{ delay: 1.5, duration: 1 }}
           className="hero-side-label hero-side-label--right"
         >
-          <span>Est. 2023</span>
+          <span>Based in Bengaluru</span>
         </motion.div>
 
         <motion.div
@@ -517,14 +517,14 @@ export function CapsulePortal() {
           <div className="hero-bottom-nav-content">
             <div className="hero-bottom-nav-left">
               <span className="hero-bottom-nav-arrow">→</span>
-              <span>V3.0</span>
+              <span>V4.0</span>
             </div>
             <div className="hero-bottom-nav-center">
-              <a href="#">BEHANCE</a>
+              <a href="https://www.instagram.com/motion.mindx/">INSTAGRAM</a>
               <span className="hero-bottom-nav-slash">/</span>
-              <a href="#">LINKEDIN</a>
+              <a href="https://www.linkedin.com/in/uday-g-601ba9266">LINKEDIN</a>
               <span className="hero-bottom-nav-slash">/</span>
-              <a href="#">GITHUB</a>
+              <a href="https://github.com/oxBinaryBrain/">GITHUB</a>
             </div>
             <div className="hero-bottom-nav-right">
               <Link href="#work">WORK</Link>

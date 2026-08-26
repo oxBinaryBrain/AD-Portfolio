@@ -15,17 +15,16 @@ export function Loader({ onComplete }: { onComplete: () => void }) {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIndex((prev) => {
-        if (prev === LOADER_FRAMES.length - 1) {
-          clearInterval(interval);
-          setTimeout(onComplete, 800);
-          return prev;
-        }
-        return prev + 1;
-      });
+      setIndex((prev) => Math.min(prev + 1, LOADER_FRAMES.length - 1));
     }, 400);
     return () => clearInterval(interval);
-  }, [onComplete]);
+  }, []);
+
+  useEffect(() => {
+    if (index !== LOADER_FRAMES.length - 1) return;
+    const timeoutId = setTimeout(onComplete, 800);
+    return () => clearTimeout(timeoutId);
+  }, [index, onComplete]);
 
   const isLast = index === LOADER_FRAMES.length - 1;
   const frame = LOADER_FRAMES[index];

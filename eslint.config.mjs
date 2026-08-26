@@ -12,6 +12,9 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Vendored research artifacts and MCP tool manifests, not project source:
+    "docs/**",
+    "mcps/**",
   ]),
 ]);
 
